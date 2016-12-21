@@ -302,13 +302,6 @@
  \chapter*{致\ 谢}
 }
 
-%% enumeration
-\RequirePackage{enumitem}
-\setenumerate[1]{label=\textsf{\arabic{chapter}.\arabic*},
- topsep=0em,leftmargin=*,itemsep=0.5em,parsep=0.1em}
-\setenumerate[2]{label=\textsf{\alph*.},topsep=0em,
- leftmargin=*,itemsep=0.1em,parsep=0em}
-
 %% mathematics
 \numberwithin{equation}{chapter}
 \theoremstyle{plain}
