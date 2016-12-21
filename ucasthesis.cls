@@ -1,6 +1,6 @@
 %%% "casthesis.cls"
 \NeedsTeXFormat{LaTeX2e}[2009/06/29]
-\ProvidesClass{ucasthesis}[2012/02/04 v1.0a LaTeX Class Written by Zan Pan]
+\ProvidesClass{ucasthesis}[2017/12/21 v1.0a LaTeX Class Written by Zan Pan]
 
 %% options 
 \LoadClass[a4paper,12pt,twoside,openany,titlepage,draft]{book}
