@@ -1,0 +1,70 @@
+%% "template.tex" by Zan Pan, 12/20/2016
+%% E-mail: panzan89@gmail.com
+%% xeLaTeX 3.1415926-2.2-0.9995.2
+%% Encoding: UTF-8
+
+\documentclass{ucasthesis}
+\hypersetup{%
+ pdftitle={中国科学院理论物理研究所学位论文模板},
+ pdfauthor={张三},
+ pdfsubject={理论物理},
+ pdfkeywords={学位论文，LaTeX模板}
+}
+
+\begin{document}
+
+\confidential{}
+\title{中国科学院理论物理研究所学位论文模板}
+\author{张三}
+\advisor{李四~~研究员}
+\advisorinstitute{中国科学院理论物理研究所}
+\degree{博士}
+\majordegree{理学博士}
+\major{理论物理}
+\institute{中国科学院理论物理研究所}
+\submitdate{2017年5月}
+
+\maketitle
+
+\englishtitle{\LaTeX{} Thesis Template for UCAS}
+\englishauthor{San Zhang}
+\englishadvisor{Prof. Si Li}
+\englishinstitute{Institute of Theoretical Physics \\ Chinese Academy of Sciences}
+\englishdegree{Doctor}
+\englishmajordegree{Science}
+\englishsubmitdate{May, 2017}
+
+\makeenglishtitle
+
+\frontmatter
+
+\clearhead
+
+\input{chapters/abstract}
+
+\contents
+
+\mainmatter
+
+\chapters
+
+\emptypage
+
+\input{chapters/introduction}
+\input{chapters/results}
+\input{chapters/conclusions}
+
+\backmatter
+
+\clearhead
+
+\references
+\input{chapters/references}
+
+\publications
+\input{chapters/publications}
+
+\acknowledgements
+\input{chapters/acknowledgements}
+
+\end{document}
