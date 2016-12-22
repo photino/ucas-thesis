@@ -17,7 +17,7 @@
 
 %% general style
 \RequirePackage[svgnames]{xcolor}
-\RequirePackage[labelfont={small,sf},labelsep=period,textfont=small,
+\RequirePackage[format=hang,labelfont={small,sf},labelsep=quad,textfont=small,
  justification=justified,margin={2em,2em}]{caption}
 \RequirePackage[top=1.2cm,bottom=1.2cm,left=2.7cm,right=2.7cm,
  headsep=0.6cm,footnotesep=0.6cm,includefoot,includehead]{geometry}
@@ -92,22 +92,19 @@
 \RequirePackage{titlesec}
 \renewcommand{\chaptername}{第\CJKnumber{\thechapter}章}
 \titleformat{\chapter}{\centering\large\sffamily}{\chaptername}{0.8em}{}
-\titleformat{\section}[hang]{\sffamily}{\thesection}{0.6em}{}
+\titleformat{\section}[hang]{\centering\sffamily}{\thesection}{0.6em}{}
 
 %% style of contents
 \RequirePackage{titletoc}
 \titlecontents{chapter}[0em]{\addvspace{1.2ex}\sffamily}
- {第\CJKnumber{\thecontentslabel}章\hspace{0.8em}}{\hspace{0em}}
- {\titlerule*[0.72pc]{.}\hspace{0.3em}\rmfamily\normalsize
- \contentspage[{\makebox[0pt][r]{\thecontentspage}}]}
-\titlecontents{figure}[0em]{\addvspace{0.2ex}}
- {图\thecontentslabel\hspace{0.8em}}{\hspace{0em}}
- {\titlerule*[0.72pc]{.}\hspace{0.3em}\rmfamily\normalsize
- \contentspage[{\makebox[0pt][r]{\thecontentspage}}]}
-\titlecontents{table}[0em]{\addvspace{0.2ex}}
- {表\thecontentslabel\hspace{0.8em}}{\hspace{0em}}
- {\titlerule*[0.72pc]{.}\hspace{0.3em}\rmfamily\normalsize
- \contentspage[{\makebox[0pt][r]{\thecontentspage}}]}
+ {第\CJKnumber{\thecontentslabel}章\hspace{0.8em}}{}
+ {\titlerule*[0.72pc]{.}\contentspage}
+\titlecontents{section}[3.8em]{\addvspace{0.2ex}}
+ {\contentslabel{2em}}{}{\titlerule*[0.72pc]{.}\contentspage}
+\titlecontents{figure}[2em]{\addvspace{0.2ex}}
+ {\contentslabel{2em}}{}{\titlerule*[0.72pc]{.}\contentspage}
+\titlecontents{table}[2em]{\addvspace{0.2ex}}
+ {\contentslabel{2em}}{}{\titlerule*[0.72pc]{.}\contentspage}
 
 %% style of head
 \RequirePackage{fancyhdr}
@@ -223,17 +220,19 @@
  \begin{center}
   \vspace*{2cm}
   \Large{\textsf{\@englishtitle}}
-  \\[2cm]
+  \\[1cm]
   \begin{minipage}{0.85\textwidth}
    \large
-   \centering{By} \\
    \centering{\textbf{\@englishauthor}}
+   \\[1cm]
+   \centering{Directed by} \\
+   \centering{\textbf{\@englishadvisor}}
    \\[2cm]
    \centering{A Dissertation Submitted to} \\
    \centering{University of Chinese Academy of Sciences} \\
    \centering{In partial fulfillment of the requirement} \\
    \centering{For the degree of} \\
-   \centering{\@englishdegree of \@englishmajordegree}
+   \centering{\@englishdegree\ of \@englishmajordegree}
    \\[2cm]
    \centering{\@englishinstitute}
    \\[2cm]
@@ -301,6 +300,10 @@
  \addcontentsline{toc}{chapter}{致谢}
  \chapter*{致\ 谢}
 }
+
+%% enumeration
+\RequirePackage{enumitem}
+\setenumerate[1]{leftmargin=3.3em,topsep=0.4em,itemsep=0.4em,parsep=0em}
 
 %% mathematics
 \numberwithin{equation}{chapter}
